@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B368C60F5A4E9455C5B2ACF4 /* Pods_desafios_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */; };
 		BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B22759ACEA004E52A2 /* AppDelegate.swift */; };
 		BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */; };
 		BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B62759ACEA004E52A2 /* ViewController.swift */; };
 		BABB67BA2759ACEA004E52A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABB67B82759ACEA004E52A2 /* Main.storyboard */; };
 		BABB67BC2759ACEC004E52A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB67BB2759ACEC004E52A2 /* Assets.xcassets */; };
 		BABB67BF2759ACEC004E52A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABB67BD2759ACEC004E52A2 /* LaunchScreen.storyboard */; };
+		BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */; };
+		BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CA2759B075004E52A2 /* ViewUtils.swift */; };
+		BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CD2759B51B004E52A2 /* ColorEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafios_view_code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.release.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.release.xcconfig"; sourceTree = "<group>"; };
+		9253CE54DA373233AF99AE33 /* Pods-desafios-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.debug.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.debug.xcconfig"; sourceTree = "<group>"; };
 		BABB67AF2759ACEA004E52A2 /* desafios-view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafios-view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABB67B22759ACEA004E52A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		BABB67BB2759ACEC004E52A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BABB67BE2759ACEC004E52A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABB67C02759ACEC004E52A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MussumIpsumViewController.swift; sourceTree = "<group>"; };
+		BABB67CA2759B075004E52A2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		BABB67CD2759B51B004E52A2 /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B368C60F5A4E9455C5B2ACF4 /* Pods_desafios_view_code.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4964A95AAE42CBB5F8479750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92AC9774102DF32D7294FCCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9253CE54DA373233AF99AE33 /* Pods-desafios-view-code.debug.xcconfig */,
+				2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BABB67A62759ACEA004E52A2 = {
 			isa = PBXGroup;
 			children = (
 				BABB67B12759ACEA004E52A2 /* desafios-view-code */,
 				BABB67B02759ACEA004E52A2 /* Products */,
+				92AC9774102DF32D7294FCCC /* Pods */,
+				4964A95AAE42CBB5F8479750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +86,9 @@
 		BABB67B12759ACEA004E52A2 /* desafios-view-code */ = {
 			isa = PBXGroup;
 			children = (
+				BABB67CC2759B50C004E52A2 /* enum */,
+				BABB67C92759B051004E52A2 /* utils */,
+				BABB67C62759AD13004E52A2 /* desafio-um */,
 				BABB67B22759ACEA004E52A2 /* AppDelegate.swift */,
 				BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */,
 				BABB67B62759ACEA004E52A2 /* ViewController.swift */,
@@ -67,6 +100,30 @@
 			path = "desafios-view-code";
 			sourceTree = "<group>";
 		};
+		BABB67C62759AD13004E52A2 /* desafio-um */ = {
+			isa = PBXGroup;
+			children = (
+				BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */,
+			);
+			path = "desafio-um";
+			sourceTree = "<group>";
+		};
+		BABB67C92759B051004E52A2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				BABB67CA2759B075004E52A2 /* ViewUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		BABB67CC2759B50C004E52A2 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				BABB67CD2759B51B004E52A2 /* ColorEnum.swift */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BABB67C32759ACEC004E52A2 /* Build configuration list for PBXNativeTarget "desafios-view-code" */;
 			buildPhases = (
+				CD371F2D4D58F585D0BABD32 /* [CP] Check Pods Manifest.lock */,
 				BABB67AB2759ACEA004E52A2 /* Sources */,
 				BABB67AC2759ACEA004E52A2 /* Frameworks */,
 				BABB67AD2759ACEA004E52A2 /* Resources */,
+				59BE94C7FE61BF6B3C216C25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +192,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59BE94C7FE61BF6B3C216C25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD371F2D4D58F585D0BABD32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafios-view-code-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BABB67AB2759ACEA004E52A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */,
+				BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */,
+				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
+				BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */,
 				BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +388,7 @@
 		};
 		BABB67C42759ACEC004E52A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9253CE54DA373233AF99AE33 /* Pods-desafios-view-code.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +417,7 @@
 		};
 		BABB67C52759ACEC004E52A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
