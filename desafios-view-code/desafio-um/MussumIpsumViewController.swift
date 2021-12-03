@@ -19,12 +19,12 @@ open class MussumIpsumViewController : UIViewController {
     
     private lazy var container: UIView = {
         let view = UIView()
+        view.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
         return view
     }()
     
     private lazy var content: UIView = {
         let view = UIView()
-        view.backgroundColor = hexStringToUIColor(hex: "F5F5F5")
         return view
     }()
     
@@ -44,14 +44,11 @@ open class MussumIpsumViewController : UIViewController {
         label.lineBreakMode = .byWordWrapping
         label.font = .systemFont(ofSize: 15)
         label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
-        label.sizeToFit()
         return label
     }()
     
     private lazy var imageCentral: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleToFill
-        image.sizeToFit()
         return image
     }()
     
@@ -76,7 +73,14 @@ open class MussumIpsumViewController : UIViewController {
     private func setupView() {
         titleLabel.text = "Mussum Ipsum. Cacilds!"
         descriptionLabel.text = "Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Quem num gosta di mé, boa gentis num é. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. \n\nQuem num gosta di mim que vai caçá sua turmis! Suco de cevadiss deixa as pessoas mais interessantis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Não sou faixa preta cumpadi, sou preto inteiris, inteiris."
+//        descriptionLabel.text = "Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Quem num gosta di mé, boa gentis num é. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. \n\nQuem num gosta di mim que vai caçá sua turmis!"
+        
+        setupImage()
+    }
+    
+    private func setupImage() {
         imageCentral.image = UIImage(named: "foto_mussum")
+        imageCentral.contentMode = .scaleAspectFit
     }
     
     private func addViewComponents() {
@@ -91,23 +95,27 @@ open class MussumIpsumViewController : UIViewController {
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(content)
-            make.trailing.equalTo(content)
-            make.leading.equalTo(content)
+            make.top.equalToSuperview()
             make.width.greaterThanOrEqualTo(0)
+            make.height.greaterThanOrEqualTo(0)
         }
         
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
-            make.bottom.equalTo(imageCentral.snp.top)
-            make.trailing.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.width.greaterThanOrEqualTo(0)
+            make.bottom.equalTo(imageCentral.snp.top).offset(0)
+            make.trailing.equalTo(content)
+            make.leading.equalTo(content)
+            make.height.greaterThanOrEqualTo(0)
         }
         
         imageCentral.snp.makeConstraints { make in
-            make.topMargin.equalTo(descriptionLabel.snp.bottom).offset(18)
-            make.centerX.equalToSuperview()
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(-10)
+            make.bottom.equalToSuperview().inset(30)
+            make.trailing.equalTo(content)
+            make.leading.equalTo(content)
+            make.centerX.equalTo(content)
+            make.width.greaterThanOrEqualTo(1)
+            make.height.greaterThanOrEqualTo(1)
         }
         
 //        scrollView.snp.makeConstraints { make in
@@ -122,7 +130,7 @@ open class MussumIpsumViewController : UIViewController {
             make.top.equalTo(container).inset(50)
             make.trailing.equalTo(container).inset(26)
             make.leading.equalTo(container).inset(26)
-            make.bottom.equalTo(container).inset(50)
+            make.bottom.equalTo(buttonOpenDialog.snp.top).offset(18)
         }
         
         buttonOpenDialog.snp.makeConstraints { make in
