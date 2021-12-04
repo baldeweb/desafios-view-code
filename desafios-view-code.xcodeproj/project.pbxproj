@@ -17,6 +17,9 @@
 		BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */; };
 		BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CA2759B075004E52A2 /* ViewUtils.swift */; };
 		BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CD2759B51B004E52A2 /* ColorEnum.swift */; };
+		BABB67D5275BA837004E52A2 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABB67D3275BA80D004E52A2 /* lato-bold.ttf */; };
+		BABB67D6275BA837004E52A2 /* lato-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABB67D4275BA80D004E52A2 /* lato-regular.ttf */; };
+		BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67D7275BA8AB004E52A2 /* FontUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MussumIpsumViewController.swift; sourceTree = "<group>"; };
 		BABB67CA2759B075004E52A2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		BABB67CD2759B51B004E52A2 /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
+		BABB67D3275BA80D004E52A2 /* lato-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-bold.ttf"; sourceTree = "<group>"; };
+		BABB67D4275BA80D004E52A2 /* lato-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-regular.ttf"; sourceTree = "<group>"; };
+		BABB67D7275BA8AB004E52A2 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		BABB67B12759ACEA004E52A2 /* desafios-view-code */ = {
 			isa = PBXGroup;
 			children = (
+				BABB67CF275BA753004E52A2 /* resources */,
 				BABB67CC2759B50C004E52A2 /* enum */,
 				BABB67C92759B051004E52A2 /* utils */,
 				BABB67C62759AD13004E52A2 /* desafio-um */,
@@ -112,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BABB67CA2759B075004E52A2 /* ViewUtils.swift */,
+				BABB67D7275BA8AB004E52A2 /* FontUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -122,6 +130,23 @@
 				BABB67CD2759B51B004E52A2 /* ColorEnum.swift */,
 			);
 			path = enum;
+			sourceTree = "<group>";
+		};
+		BABB67CF275BA753004E52A2 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BABB67D0275BA75C004E52A2 /* font */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		BABB67D0275BA75C004E52A2 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				BABB67D3275BA80D004E52A2 /* lato-bold.ttf */,
+				BABB67D4275BA80D004E52A2 /* lato-regular.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABB67D5275BA837004E52A2 /* lato-bold.ttf in Resources */,
+				BABB67D6275BA837004E52A2 /* lato-regular.ttf in Resources */,
 				BABB67BF2759ACEC004E52A2 /* LaunchScreen.storyboard in Resources */,
 				BABB67BC2759ACEC004E52A2 /* Assets.xcassets in Resources */,
 				BABB67BA2759ACEA004E52A2 /* Main.storyboard in Resources */,
@@ -241,6 +268,7 @@
 			files = (
 				BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */,
 				BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */,
+				BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */,
 				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
 				BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */,
