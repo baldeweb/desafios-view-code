@@ -12,7 +12,7 @@ import SnapKit
 class ItemMenuCell: UITableViewCell {
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
+        view.backgroundColor = UIColor.init(named: ColorEnum.darkTeal.rawValue)
         return view
     }()
     
@@ -20,8 +20,8 @@ class ItemMenuCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.font = UIFont.Lato(.bold, size: 22)
-        label.textColor = UIColor.init(named: ColorEnum.darkGray.rawValue)
+        label.font = UIFont.Lato(.bold, size: 16)
+        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
         label.sizeToFit()
         return label
     }()
@@ -30,17 +30,13 @@ class ItemMenuCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+        addViewComponents()
+        setupConstraints()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupView()
-        addViewComponents()
-        setupConstraints()
     }
     
     private func setupView() {
@@ -66,6 +62,7 @@ class ItemMenuCell: UITableViewCell {
             make.bottom.equalToSuperview().inset(10)
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().inset(10)
+            make.height.equalTo(50)
         }
     }
 }
