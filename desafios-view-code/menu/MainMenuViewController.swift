@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MainMenu: UIViewController {
+class MainMenuViewController: UIViewController {
     private lazy var scrollView = UIScrollView()
     
     private lazy var container: UIView = {
@@ -39,7 +39,7 @@ class MainMenu: UIViewController {
     
     private let listItemsMenu = Array<ItemMenu>(arrayLiteral:
                                                     ItemMenu(titleItem: "Mussum Ipsum", controller: MussumIpsumViewController()),
-                                                ItemMenu(titleItem: "Mussum Ipsum", controller: MussumIpsumViewController())
+                                                ItemMenu(titleItem: "Pagamento com Cartão de Crédito", controller: PaymentListCardViewController())
     )
     
     override func viewDidLoad() {
@@ -48,7 +48,6 @@ class MainMenu: UIViewController {
         title = "Menu Principal"
         view.backgroundColor = .white
         
-        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -79,7 +78,7 @@ class MainMenu: UIViewController {
     }
 }
 
-extension MainMenu: UITableViewDelegate, UITableViewDataSource {
+extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listItemsMenu.count
     }

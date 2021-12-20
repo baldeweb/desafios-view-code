@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowSecene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowSecene)
             
-            let vc = MainMenu()
+            let vc = MainMenuViewController()
             vc.view.backgroundColor = .white
             window.rootViewController = UINavigationController(rootViewController: vc)
             self.window = window
