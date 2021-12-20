@@ -71,6 +71,12 @@ class MainMenu: UIViewController {
             make.trailing.equalToSuperview()
         }
     }
+    
+    private func openMenuItem(_ controller: UIViewController) {
+        let screen = controller
+        screen.modalPresentationStyle = .overCurrentContext
+        self.present(screen, animated: true)
+    }
 }
 
 extension MainMenu: UITableViewDelegate, UITableViewDataSource {
@@ -79,7 +85,7 @@ extension MainMenu: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 80
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,8 +99,6 @@ extension MainMenu: UITableViewDelegate, UITableViewDataSource {
         guard let item = tableView.indexPathForSelectedRow else { return }
         print("LOG >> Item: \(listItemsMenu[item.row].titleItem)")
         
-        let screen = listItemsMenu[item.row].controller
-        screen.modalPresentationStyle = .overCurrentContext
-        self.present(screen, animated: true)
+        openMenuItem(listItemsMenu[item.row].controller)
     }
 }
