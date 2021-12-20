@@ -8,7 +8,9 @@
 import Foundation
 
 enum ColorEnum: String {
+    case white = "F5F5F5"
     case orange = "FF9052"
-    case lightGray = "F5F5F5"
+    case lightGray = "F0F0F0"
     case darkGray = "47525E"
+    case red = "F95F62"
 }

@@ -23,7 +23,7 @@ class ItemCardCell: UITableViewCell {
         return view
     }()
 
-    private lazy var iconFlagCard: UIImageView = {
+    open lazy var iconFlagCard: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         return image
