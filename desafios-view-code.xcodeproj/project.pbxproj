@@ -22,6 +22,8 @@
 		BABB67D6275BA837004E52A2 /* lato-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABB67D4275BA80D004E52A2 /* lato-regular.ttf */; };
 		BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67D7275BA8AB004E52A2 /* FontUtils.swift */; };
 		BAE833B3277025C40057BF60 /* PaymentListCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */; };
+		BAE833B5277027580057BF60 /* ItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B4277027580057BF60 /* ItemCardCell.swift */; };
+		BAE833B7277027B60057BF60 /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B6277027B60057BF60 /* ItemCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		BABB67D4275BA80D004E52A2 /* lato-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-regular.ttf"; sourceTree = "<group>"; };
 		BABB67D7275BA8AB004E52A2 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
 		BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListCardViewController.swift; sourceTree = "<group>"; };
+		BAE833B4277027580057BF60 /* ItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardCell.swift; sourceTree = "<group>"; };
+		BAE833B6277027B60057BF60 /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */,
+				BAE833B6277027B60057BF60 /* ItemCard.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */,
+				BAE833B4277027580057BF60 /* ItemCardCell.swift */,
 			);
 			path = "challenge-two";
 			sourceTree = "<group>";
@@ -296,12 +302,14 @@
 			files = (
 				BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */,
 				BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */,
+				BAE833B5277027580057BF60 /* ItemCardCell.swift in Sources */,
 				BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */,
 				BAB9BC8827700F6200EA1786 /* MainMenuViewController.swift in Sources */,
 				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
 				BAE833B3277025C40057BF60 /* PaymentListCardViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
 				BAB9BC8A2770108600EA1786 /* ItemMenuCell.swift in Sources */,
+				BAE833B7277027B60057BF60 /* ItemCard.swift in Sources */,
 				BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */,
 				BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */,
 				BAB9BC8D27701A3800EA1786 /* ItemMenu.swift in Sources */,
