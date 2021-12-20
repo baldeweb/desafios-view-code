@@ -12,7 +12,10 @@ import SnapKit
 class ItemCardCell: UITableViewCell {
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = hexStringToUIColor(hex: ColorEnum.lightGray.rawValue)
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
+        view.layer.borderWidth = 0.5
+        view.layer.borderColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue).cgColor
         return view
     }()
     
@@ -60,7 +63,7 @@ class ItemCardCell: UITableViewCell {
     override func layoutSubviews() {
        super.layoutSubviews()
         
-       let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+       let margins = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
        contentView.frame = contentView.frame.inset(by: margins)
    }
     

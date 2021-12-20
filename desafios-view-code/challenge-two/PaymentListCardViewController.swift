@@ -18,6 +18,22 @@ class PaymentListCardViewController: UIViewController {
     
     private lazy var navbarContainer = UIView()
     
+    open lazy var iconBack: UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    open lazy var titleNavbar: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.font = UIFont.Lato(.bold, size: 16)
+        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.sizeToFit()
+        return label
+    }()
+    
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -70,12 +86,18 @@ class PaymentListCardViewController: UIViewController {
     }
     
     private func setupView() {
+        iconBack.image = UIImage(named: "iconBack")
+        titleNavbar.text = "FORMAS DE PAGAMENTO"
+        
         buttonAddNewCard.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
         
         buttonBack.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
     }
     
     private func addViewComponents() {
+        navbarContainer.addSubview(iconBack)
+        navbarContainer.addSubview(titleNavbar)
+        container.addSubview(navbarContainer)
         container.addSubview(tableView)
         container.addSubview(buttonAddNewCard)
         container.addSubview(buttonBack)
@@ -92,8 +114,32 @@ class PaymentListCardViewController: UIViewController {
             make.height.greaterThanOrEqualTo(0)
         }
         
-        tableView.snp.makeConstraints { make in
+        navbarContainer.snp.makeConstraints { make in
+            make.topMargin.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.width.greaterThanOrEqualTo(0)
+            make.height.greaterThanOrEqualTo(50)
+        }
+        
+        iconBack.snp.makeConstraints { make in
             make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.width.equalTo(25)
+            make.height.equalTo(25)
+        }
+        
+        titleNavbar.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.height.equalTo(50)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(navbarContainer.snp.bottom)
             make.bottomMargin.equalTo(buttonAddNewCard.snp.top)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
