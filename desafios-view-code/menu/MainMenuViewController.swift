@@ -31,6 +31,8 @@ class MainMenuViewController: UIViewController {
         tv.backgroundColor = .lightGray
         tv.delegate = self
         tv.dataSource = self
+        tv.separatorStyle = .none
+        tv.indicatorStyle = .default
         tv.register(ItemMenuCell.self, forCellReuseIdentifier: self.cellId)
         return tv
     }()
@@ -47,9 +49,6 @@ class MainMenuViewController: UIViewController {
         
         title = "Menu Principal"
         view.backgroundColor = .white
-        
-        tableView.dataSource = self
-        tableView.delegate = self
     }
     
     override func loadView() {

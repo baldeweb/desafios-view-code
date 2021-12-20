@@ -16,19 +16,23 @@ class PaymentListCardViewController: UIViewController {
         return view
     }()
     
+    private lazy var navbarContainer = UIView()
+    
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
         tv.delegate = self
         tv.dataSource = self
+        tv.separatorStyle = .none
+        tv.indicatorStyle = .default
         tv.register(ItemCardCell.self, forCellReuseIdentifier: self.cellId)
         return tv
     }()
     
     private lazy var buttonAddNewCard: UIButton = {
         let button = UIButton()
-        button.titleLabel?.textColor = hexStringToUIColor(hex: ColorEnum.white.rawValue)
+        button.titleLabel?.textColor = hexStringToUIColor(hex: ColorEnum.red.rawValue)
         button.backgroundColor = hexStringToUIColor(hex: ColorEnum.red.rawValue)
         button.setTitle("Adicionar novo cartão", for: .normal)
         button.layer.cornerRadius = 5
@@ -39,16 +43,18 @@ class PaymentListCardViewController: UIViewController {
     private lazy var buttonBack: UIButton = {
         let button = UIButton()
         button.setTitle("Voltar", for: .normal)
+        button.backgroundColor = .clear
+        button.setTitleColor(.darkGray, for: .normal)
         return button
     }()
     
     private let cellId = "cellId"
     
     private let listCards = Array<ItemCard>(arrayLiteral:
-               ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Daycoval "),
-                ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Santander "),
-                ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Bradesco "),
-                ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Itaú ")
+                                                ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Daycoval "),
+                                            ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Santander "),
+                                            ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Bradesco "),
+                                            ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Itaú ")
     )
     
     override func viewDidLoad() {
@@ -65,32 +71,50 @@ class PaymentListCardViewController: UIViewController {
     
     private func setupView() {
         buttonAddNewCard.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
+        
         buttonBack.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
     }
     
     private func addViewComponents() {
-        view.addSubview(tableView)
+        container.addSubview(tableView)
+        container.addSubview(buttonAddNewCard)
+        container.addSubview(buttonBack)
+        view.addSubview(container)
     }
     
     private func setupConstraints() {
-        tableView.snp.makeConstraints { make in
+        container.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.bottom.equalTo(buttonAddNewCard.snp.top)
+            make.bottom.equalToSuperview()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
+            make.width.greaterThanOrEqualTo(0)
+            make.height.greaterThanOrEqualTo(0)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottomMargin.equalTo(buttonAddNewCard.snp.top)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.width.greaterThanOrEqualTo(0)
             make.height.greaterThanOrEqualTo(0)
         }
         
         buttonAddNewCard.snp.makeConstraints { make in
-            make.bottom.equalTo(buttonBack.snp.top).inset(20)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.bottomMargin.equalTo(buttonBack.snp.top).offset(-10)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.width.greaterThanOrEqualTo(0)
+            make.height.greaterThanOrEqualTo(50)
         }
-        
+
         buttonBack.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
+            make.bottomMargin.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().inset(20)
+            make.width.greaterThanOrEqualTo(0)
+            make.height.greaterThanOrEqualTo(50)
         }
     }
     
@@ -121,5 +145,9 @@ extension PaymentListCardViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let item = tableView.indexPathForSelectedRow else { return }
         print("LOG >> Item: \(listCards[item.row].description)")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
     }
 }
