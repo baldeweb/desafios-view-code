@@ -71,14 +71,16 @@ open class MussumIpsumViewController : UIViewController {
     }
     
     private func setupView() {
+        view.backgroundColor = .white
         titleLabel.text = "Mussum Ipsum. Cacilds!"
         descriptionLabel.text = "Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Quem num gosta di mé, boa gentis num é. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Quem num gosta di mim que vai caçá sua turmis! Suco de cevadiss deixa as pessoas mais interessantis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Não sou faixa preta cumpadi, sou preto inteiris, inteiris."
         
         setupImage()
+        buttonOpenDialog.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
     }
     
-    private func setupTitle() {
-        
+    @objc func actionDialog() {
+        self.dismiss(animated: true)
     }
     
     private func setupImage() {

@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B368C60F5A4E9455C5B2ACF4 /* Pods_desafios_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */; };
+		BAB9BC8827700F6200EA1786 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC8727700F6200EA1786 /* MainMenu.swift */; };
+		BAB9BC8A2770108600EA1786 /* ItemMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC892770108600EA1786 /* ItemMenuCell.swift */; };
+		BAB9BC8D27701A3800EA1786 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */; };
 		BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B22759ACEA004E52A2 /* AppDelegate.swift */; };
 		BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */; };
 		BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67B62759ACEA004E52A2 /* ViewController.swift */; };
-		BABB67BA2759ACEA004E52A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABB67B82759ACEA004E52A2 /* Main.storyboard */; };
 		BABB67BC2759ACEC004E52A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB67BB2759ACEC004E52A2 /* Assets.xcassets */; };
-		BABB67BF2759ACEC004E52A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BABB67BD2759ACEC004E52A2 /* LaunchScreen.storyboard */; };
 		BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */; };
 		BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CA2759B075004E52A2 /* ViewUtils.swift */; };
 		BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CD2759B51B004E52A2 /* ColorEnum.swift */; };
@@ -26,13 +27,14 @@
 		1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafios_view_code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.release.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.release.xcconfig"; sourceTree = "<group>"; };
 		9253CE54DA373233AF99AE33 /* Pods-desafios-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.debug.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB9BC8727700F6200EA1786 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		BAB9BC892770108600EA1786 /* ItemMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuCell.swift; sourceTree = "<group>"; };
+		BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
 		BABB67AF2759ACEA004E52A2 /* desafios-view-code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafios-view-code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABB67B22759ACEA004E52A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BABB67B62759ACEA004E52A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BABB67B92759ACEA004E52A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BABB67BB2759ACEC004E52A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BABB67BE2759ACEC004E52A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BABB67C02759ACEC004E52A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MussumIpsumViewController.swift; sourceTree = "<group>"; };
 		BABB67CA2759B075004E52A2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
@@ -71,6 +73,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BAB9BC8627700F4F00EA1786 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				BAB9BC8727700F6200EA1786 /* MainMenu.swift */,
+				BAB9BC892770108600EA1786 /* ItemMenuCell.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		BAB9BC8B27701A2B00EA1786 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		BABB67A62759ACEA004E52A2 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +111,8 @@
 		BABB67B12759ACEA004E52A2 /* desafios-view-code */ = {
 			isa = PBXGroup;
 			children = (
+				BAB9BC8B27701A2B00EA1786 /* model */,
+				BAB9BC8627700F4F00EA1786 /* menu */,
 				BABB67CF275BA753004E52A2 /* resources */,
 				BABB67CC2759B50C004E52A2 /* enum */,
 				BABB67C92759B051004E52A2 /* utils */,
@@ -99,9 +120,7 @@
 				BABB67B22759ACEA004E52A2 /* AppDelegate.swift */,
 				BABB67B42759ACEA004E52A2 /* SceneDelegate.swift */,
 				BABB67B62759ACEA004E52A2 /* ViewController.swift */,
-				BABB67B82759ACEA004E52A2 /* Main.storyboard */,
 				BABB67BB2759ACEC004E52A2 /* Assets.xcassets */,
-				BABB67BD2759ACEC004E52A2 /* LaunchScreen.storyboard */,
 				BABB67C02759ACEC004E52A2 /* Info.plist */,
 			);
 			path = "desafios-view-code";
@@ -211,9 +230,7 @@
 			files = (
 				BABB67D5275BA837004E52A2 /* lato-bold.ttf in Resources */,
 				BABB67D6275BA837004E52A2 /* lato-regular.ttf in Resources */,
-				BABB67BF2759ACEC004E52A2 /* LaunchScreen.storyboard in Resources */,
 				BABB67BC2759ACEC004E52A2 /* Assets.xcassets in Resources */,
-				BABB67BA2759ACEA004E52A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,33 +286,17 @@
 				BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */,
 				BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */,
 				BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */,
+				BAB9BC8827700F6200EA1786 /* MainMenu.swift in Sources */,
 				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
+				BAB9BC8A2770108600EA1786 /* ItemMenuCell.swift in Sources */,
 				BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */,
 				BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */,
+				BAB9BC8D27701A3800EA1786 /* ItemMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BABB67B82759ACEA004E52A2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BABB67B92759ACEA004E52A2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BABB67BD2759ACEC004E52A2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BABB67BE2759ACEC004E52A2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BABB67C12759ACEC004E52A2 /* Debug */ = {
@@ -427,7 +428,6 @@
 				INFOPLIST_FILE = "desafios-view-code/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +456,6 @@
 				INFOPLIST_FILE = "desafios-view-code/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
