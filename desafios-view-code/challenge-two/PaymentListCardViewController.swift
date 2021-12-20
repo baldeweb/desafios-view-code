@@ -21,6 +21,7 @@ class PaymentListCardViewController: UIViewController {
     open lazy var iconBack: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
+        image.isUserInteractionEnabled = true
         return image
     }()
     
@@ -76,6 +77,12 @@ class PaymentListCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setupPanGestureHandleClose()
+    }
+    
+    func setupPanGestureHandleClose() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(actionDialog))
+        iconBack.addGestureRecognizer(tapGesture)
     }
     
     override func loadView() {
@@ -165,6 +172,7 @@ class PaymentListCardViewController: UIViewController {
     }
     
     @objc func actionDialog() {
+        print("LOG >> action")
         self.dismiss(animated: true)
     }
 }
