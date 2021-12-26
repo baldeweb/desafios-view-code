@@ -12,7 +12,7 @@ import SnapKit
 class PaymentListCardViewController: UIViewController {
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
+        view.backgroundColor = UIColor.init(named: GeneralColorEnum.lightGray.rawValue)
         return view
     }()
     
@@ -30,7 +30,7 @@ class PaymentListCardViewController: UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.Lato(.bold, size: 16)
-        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.textColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue)
         label.sizeToFit()
         return label
     }()
@@ -38,7 +38,7 @@ class PaymentListCardViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
+        tv.backgroundColor = UIColor.init(named: GeneralColorEnum.lightGray.rawValue)
         tv.delegate = self
         tv.dataSource = self
         tv.separatorStyle = .none
@@ -49,9 +49,9 @@ class PaymentListCardViewController: UIViewController {
     
     private lazy var buttonAddNewCard: UIButton = {
         let button = UIButton()
-        button.titleLabel?.textColor = hexStringToUIColor(hex: ColorEnum.red.rawValue)
-        button.backgroundColor = hexStringToUIColor(hex: ColorEnum.red.rawValue)
-        button.setTitle("Adicionar novo cartão", for: .normal)
+        button.backgroundColor = hexStringToUIColor(hex: GeneralColorEnum.red.rawValue)
+        button.titleLabel?.textColor = hexStringToUIColor(hex: GeneralColorEnum.red.rawValue)
+        button.setTitle(ChallengeTwoString.challTwoButtonAddNewCard.rawValue, for: .normal)
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         return button
@@ -59,8 +59,8 @@ class PaymentListCardViewController: UIViewController {
     
     private lazy var buttonBack: UIButton = {
         let button = UIButton()
-        button.setTitle("Voltar", for: .normal)
         button.backgroundColor = .clear
+        button.setTitle(GeneralStringEnum.textBack.rawValue, for: .normal)
         button.setTitleColor(.darkGray, for: .normal)
         return button
     }()
@@ -68,10 +68,10 @@ class PaymentListCardViewController: UIViewController {
     private let cellId = "cellId"
     
     private let listCards = Array<ItemCard>(arrayLiteral:
-                                                ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Daycoval "),
-                                            ItemCard(icon: "iconMastercard", description: "[ CRÉDITO ] - Santander "),
-                                            ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Bradesco "),
-                                            ItemCard(icon: "iconMastercard", description: "[ DÉBITO ] - Itaú ")
+                                            ItemCard(icon: ChallengeTwoImage.iconMastercard.rawValue, description: "[ CRÉDITO ] - Daycoval "),
+                                            ItemCard(icon: ChallengeTwoImage.iconMastercard.rawValue, description: "[ CRÉDITO ] - Santander "),
+                                            ItemCard(icon: ChallengeTwoImage.iconMastercard.rawValue, description: "[ DÉBITO ] - Bradesco "),
+                                            ItemCard(icon: ChallengeTwoImage.iconMastercard.rawValue, description: "[ DÉBITO ] - Itaú ")
     )
     
     override func viewDidLoad() {
@@ -93,8 +93,8 @@ class PaymentListCardViewController: UIViewController {
     }
     
     private func setupView() {
-        iconBack.image = UIImage(named: "iconBack")
-        titleNavbar.text = "FORMAS DE PAGAMENTO"
+        iconBack.image = UIImage(named: GeneralImageEnum.iconBack.rawValue)
+        titleNavbar.text = ChallengeTwoString.challTwoNavbarTitle.rawValue
         
         buttonAddNewCard.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
         
@@ -172,7 +172,6 @@ class PaymentListCardViewController: UIViewController {
     }
     
     @objc func actionDialog() {
-        print("LOG >> action")
         self.dismiss(animated: true)
     }
 }
@@ -194,11 +193,6 @@ extension PaymentListCardViewController: UITableViewDelegate, UITableViewDataSou
         cell.descriptionTitle = item.description
         cell.backgroundColor = .white
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let item = tableView.indexPathForSelectedRow else { return }
-        print("LOG >> Item: \(listCards[item.row].description)")
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

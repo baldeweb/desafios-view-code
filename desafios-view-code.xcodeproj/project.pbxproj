@@ -17,10 +17,16 @@
 		BABB67BC2759ACEC004E52A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BABB67BB2759ACEC004E52A2 /* Assets.xcassets */; };
 		BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */; };
 		BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CA2759B075004E52A2 /* ViewUtils.swift */; };
-		BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CD2759B51B004E52A2 /* ColorEnum.swift */; };
+		BABB67CE2759B51B004E52A2 /* GeneralColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67CD2759B51B004E52A2 /* GeneralColorEnum.swift */; };
 		BABB67D5275BA837004E52A2 /* lato-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABB67D3275BA80D004E52A2 /* lato-bold.ttf */; };
 		BABB67D6275BA837004E52A2 /* lato-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BABB67D4275BA80D004E52A2 /* lato-regular.ttf */; };
 		BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABB67D7275BA8AB004E52A2 /* FontUtils.swift */; };
+		BAD48AC62778A24C00BB8143 /* ChallengeOneString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48AC52778A24C00BB8143 /* ChallengeOneString.swift */; };
+		BAD48AC82778A4B700BB8143 /* ChallengeOneImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48AC72778A4B700BB8143 /* ChallengeOneImage.swift */; };
+		BAD48ACA2778A54100BB8143 /* ChallengeTwoString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48AC92778A54100BB8143 /* ChallengeTwoString.swift */; };
+		BAD48ACC2778A6C300BB8143 /* ChallengeTwoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48ACB2778A6C300BB8143 /* ChallengeTwoImage.swift */; };
+		BAD48ACE2778A9D300BB8143 /* GeneralStringEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48ACD2778A9D300BB8143 /* GeneralStringEnum.swift */; };
+		BAD48AD02778A9E300BB8143 /* GeneralImageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD48ACF2778A9E300BB8143 /* GeneralImageEnum.swift */; };
 		BAE833B3277025C40057BF60 /* PaymentListCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */; };
 		BAE833B5277027580057BF60 /* ItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B4277027580057BF60 /* ItemCardCell.swift */; };
 		BAE833B7277027B60057BF60 /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE833B6277027B60057BF60 /* ItemCard.swift */; };
@@ -41,10 +47,16 @@
 		BABB67C02759ACEC004E52A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MussumIpsumViewController.swift; sourceTree = "<group>"; };
 		BABB67CA2759B075004E52A2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
-		BABB67CD2759B51B004E52A2 /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
+		BABB67CD2759B51B004E52A2 /* GeneralColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralColorEnum.swift; sourceTree = "<group>"; };
 		BABB67D3275BA80D004E52A2 /* lato-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-bold.ttf"; sourceTree = "<group>"; };
 		BABB67D4275BA80D004E52A2 /* lato-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lato-regular.ttf"; sourceTree = "<group>"; };
 		BABB67D7275BA8AB004E52A2 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		BAD48AC52778A24C00BB8143 /* ChallengeOneString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOneString.swift; sourceTree = "<group>"; };
+		BAD48AC72778A4B700BB8143 /* ChallengeOneImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOneImage.swift; sourceTree = "<group>"; };
+		BAD48AC92778A54100BB8143 /* ChallengeTwoString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTwoString.swift; sourceTree = "<group>"; };
+		BAD48ACB2778A6C300BB8143 /* ChallengeTwoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTwoImage.swift; sourceTree = "<group>"; };
+		BAD48ACD2778A9D300BB8143 /* GeneralStringEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStringEnum.swift; sourceTree = "<group>"; };
+		BAD48ACF2778A9E300BB8143 /* GeneralImageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralImageEnum.swift; sourceTree = "<group>"; };
 		BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListCardViewController.swift; sourceTree = "<group>"; };
 		BAE833B4277027580057BF60 /* ItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardCell.swift; sourceTree = "<group>"; };
 		BAE833B6277027B60057BF60 /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
@@ -138,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				BABB67C72759AD2E004E52A2 /* MussumIpsumViewController.swift */,
+				BAD48AC52778A24C00BB8143 /* ChallengeOneString.swift */,
+				BAD48AC72778A4B700BB8143 /* ChallengeOneImage.swift */,
 			);
 			path = "challenge-one";
 			sourceTree = "<group>";
@@ -154,7 +168,9 @@
 		BABB67CC2759B50C004E52A2 /* enum */ = {
 			isa = PBXGroup;
 			children = (
-				BABB67CD2759B51B004E52A2 /* ColorEnum.swift */,
+				BABB67CD2759B51B004E52A2 /* GeneralColorEnum.swift */,
+				BAD48ACD2778A9D300BB8143 /* GeneralStringEnum.swift */,
+				BAD48ACF2778A9E300BB8143 /* GeneralImageEnum.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -181,6 +197,8 @@
 			children = (
 				BAE833B2277025C40057BF60 /* PaymentListCardViewController.swift */,
 				BAE833B4277027580057BF60 /* ItemCardCell.swift */,
+				BAD48AC92778A54100BB8143 /* ChallengeTwoString.swift */,
+				BAD48ACB2778A6C300BB8143 /* ChallengeTwoImage.swift */,
 			);
 			path = "challenge-two";
 			sourceTree = "<group>";
@@ -300,19 +318,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD48AD02778A9E300BB8143 /* GeneralImageEnum.swift in Sources */,
 				BABB67B72759ACEA004E52A2 /* ViewController.swift in Sources */,
 				BABB67CB2759B075004E52A2 /* ViewUtils.swift in Sources */,
 				BAE833B5277027580057BF60 /* ItemCardCell.swift in Sources */,
 				BABB67D8275BA8AB004E52A2 /* FontUtils.swift in Sources */,
 				BAB9BC8827700F6200EA1786 /* MainMenuViewController.swift in Sources */,
+				BAD48AC62778A24C00BB8143 /* ChallengeOneString.swift in Sources */,
+				BAD48ACE2778A9D300BB8143 /* GeneralStringEnum.swift in Sources */,
 				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
+				BAD48ACA2778A54100BB8143 /* ChallengeTwoString.swift in Sources */,
 				BAE833B3277025C40057BF60 /* PaymentListCardViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
+				BAD48AC82778A4B700BB8143 /* ChallengeOneImage.swift in Sources */,
 				BAB9BC8A2770108600EA1786 /* ItemMenuCell.swift in Sources */,
 				BAE833B7277027B60057BF60 /* ItemCard.swift in Sources */,
-				BABB67CE2759B51B004E52A2 /* ColorEnum.swift in Sources */,
+				BABB67CE2759B51B004E52A2 /* GeneralColorEnum.swift in Sources */,
 				BABB67B52759ACEA004E52A2 /* SceneDelegate.swift in Sources */,
 				BAB9BC8D27701A3800EA1786 /* ItemMenu.swift in Sources */,
+				BAD48ACC2778A6C300BB8143 /* ChallengeTwoImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

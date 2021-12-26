@@ -15,7 +15,7 @@ class ItemCardCell: UITableViewCell {
         view.layer.cornerRadius = 5
         view.layer.masksToBounds = true
         view.layer.borderWidth = 0.5
-        view.layer.borderColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue).cgColor
+        view.layer.borderColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue).cgColor
         return view
     }()
     
@@ -35,7 +35,7 @@ class ItemCardCell: UITableViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.Lato(.bold, size: 16)
-        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.textColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue)
         label.sizeToFit()
         return label
     }()

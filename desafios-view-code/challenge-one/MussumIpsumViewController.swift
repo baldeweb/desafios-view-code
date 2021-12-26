@@ -14,7 +14,7 @@ open class MussumIpsumViewController : UIViewController {
     
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: ColorEnum.lightGray.rawValue)
+        view.backgroundColor = UIColor.init(named: GeneralColorEnum.lightGray.rawValue)
         return view
     }()
     
@@ -30,7 +30,7 @@ open class MussumIpsumViewController : UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.Lato(.bold, size: 22)
-        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.textColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue)
         label.sizeToFit()
         return label
     }()
@@ -40,7 +40,7 @@ open class MussumIpsumViewController : UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.Lato(.regular, size: 16)
-        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.textColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue)
         return label
     }()
     
@@ -54,9 +54,9 @@ open class MussumIpsumViewController : UIViewController {
     
     private lazy var buttonOpenDialog: UIButton = {
         let button = UIButton()
-        button.titleLabel?.textColor = hexStringToUIColor(hex: ColorEnum.lightGray.rawValue)
-        button.backgroundColor = hexStringToUIColor(hex: ColorEnum.orange.rawValue)
-        button.setTitle("ABRIS O DIALOGIS!", for: .normal)
+        button.titleLabel?.textColor = hexStringToUIColor(hex: GeneralColorEnum.lightGray.rawValue)
+        button.backgroundColor = hexStringToUIColor(hex: GeneralColorEnum.orange.rawValue)
+        button.setTitle(ChallengeOneString.challOneButtonTitle.rawValue, for: .normal)
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         return button
@@ -72,8 +72,8 @@ open class MussumIpsumViewController : UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
-        titleLabel.text = "Mussum Ipsum. Cacilds!"
-        descriptionLabel.text = "Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Copo furadis é disculpa de bebadis, arcu quam euismod magna. Quem num gosta di mé, boa gentis num é. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Quem num gosta di mim que vai caçá sua turmis! Suco de cevadiss deixa as pessoas mais interessantis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Não sou faixa preta cumpadi, sou preto inteiris, inteiris."
+        titleLabel.text = ChallengeOneString.challOneTitle.rawValue
+        descriptionLabel.text = ChallengeOneString.challOneDescription.rawValue
         
         setupImage()
         buttonOpenDialog.addTarget(self, action: #selector(actionDialog), for: .touchUpInside)
@@ -84,7 +84,7 @@ open class MussumIpsumViewController : UIViewController {
     }
     
     private func setupImage() {
-        imageCentral.image = UIImage(named: "foto_mussum")
+        imageCentral.image = UIImage(named: ChallengeOneImage.fotoMussum.rawValue)
     }
     
     private func addViewComponents() {

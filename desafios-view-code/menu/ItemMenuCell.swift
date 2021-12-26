@@ -12,7 +12,7 @@ import SnapKit
 class ItemMenuCell: UITableViewCell {
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: ColorEnum.darkTeal.rawValue)
+        view.backgroundColor = UIColor.init(named: GeneralColorEnum.darkTeal.rawValue)
         return view
     }()
     
@@ -21,7 +21,7 @@ class ItemMenuCell: UITableViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.Lato(.bold, size: 16)
-        label.textColor = hexStringToUIColor(hex: ColorEnum.darkGray.rawValue)
+        label.textColor = hexStringToUIColor(hex: GeneralColorEnum.darkGray.rawValue)
         label.sizeToFit()
         return label
     }()

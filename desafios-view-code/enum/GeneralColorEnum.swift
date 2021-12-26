@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ColorEnum: String {
+enum GeneralColorEnum: String {
     case white = "F5F5F5"
     case orange = "FF9052"
     case lightGray = "F0F0F0"

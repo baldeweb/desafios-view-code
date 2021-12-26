@@ -14,7 +14,7 @@ class MainMenuViewController: UIViewController {
     
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: ColorEnum.teal.rawValue)
+        view.backgroundColor = UIColor.init(named: GeneralColorEnum.teal.rawValue)
         return view
     }()
     
@@ -28,7 +28,7 @@ class MainMenuViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .plain)
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.backgroundColor = UIColor.init(named: ColorEnum.teal.rawValue)
+        tv.backgroundColor = UIColor.init(named: GeneralColorEnum.teal.rawValue)
         tv.delegate = self
         tv.dataSource = self
         tv.separatorStyle = .none
