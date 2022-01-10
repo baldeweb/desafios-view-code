@@ -102,7 +102,7 @@ class ItemMenuCell: UITableViewCell {
             make.leading.equalToSuperview()
             make.trailing.equalTo(triangle.snp.leading).offset(10)
             make.width.greaterThanOrEqualTo(0)
-            make.height.equalTo(150)
+            make.height.equalTo(70)
         }
         
         triangle.snp.makeConstraints { make in
