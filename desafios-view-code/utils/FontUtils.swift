@@ -10,12 +10,12 @@ import UIKit
 
 extension UIFont {
 
-    public enum OpenSansType: String {
+    public enum LatoType: String {
         case regular = "-regular"
         case bold = "-bold"
     }
 
-    static func Lato(_ type: OpenSansType = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
+    static func Lato(_ type: LatoType = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
         return UIFont(name: "lato\(type.rawValue)", size: size)!
     }
 

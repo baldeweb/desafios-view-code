@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B368C60F5A4E9455C5B2ACF4 /* Pods_desafios_view_code.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */; };
+		BA2A551E278BB6DB001861E3 /* UITriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A551D278BB6DB001861E3 /* UITriangleView.swift */; };
 		BAB9BC8827700F6200EA1786 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC8727700F6200EA1786 /* MainMenuViewController.swift */; };
 		BAB9BC8A2770108600EA1786 /* ItemMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC892770108600EA1786 /* ItemMenuCell.swift */; };
 		BAB9BC8D27701A3800EA1786 /* ItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */; };
@@ -36,6 +37,7 @@
 		1106C4063E564C404C105CD4 /* Pods_desafios_view_code.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafios_view_code.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.release.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.release.xcconfig"; sourceTree = "<group>"; };
 		9253CE54DA373233AF99AE33 /* Pods-desafios-view-code.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafios-view-code.debug.xcconfig"; path = "Target Support Files/Pods-desafios-view-code/Pods-desafios-view-code.debug.xcconfig"; sourceTree = "<group>"; };
+		BA2A551D278BB6DB001861E3 /* UITriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITriangleView.swift; sourceTree = "<group>"; };
 		BAB9BC8727700F6200EA1786 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		BAB9BC892770108600EA1786 /* ItemMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenuCell.swift; sourceTree = "<group>"; };
 		BAB9BC8C27701A3800EA1786 /* ItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMenu.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 				2166A902E46265B0AFAC5D69 /* Pods-desafios-view-code.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA2A551C278BB6B3001861E3 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				BA2A551D278BB6DB001861E3 /* UITriangleView.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 		BAB9BC8627700F4F00EA1786 /* menu */ = {
@@ -178,6 +188,7 @@
 		BABB67CF275BA753004E52A2 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA2A551C278BB6B3001861E3 /* component */,
 				BABB67D0275BA75C004E52A2 /* font */,
 			);
 			path = resources;
@@ -328,6 +339,7 @@
 				BAD48ACE2778A9D300BB8143 /* GeneralStringEnum.swift in Sources */,
 				BABB67C82759AD2E004E52A2 /* MussumIpsumViewController.swift in Sources */,
 				BAD48ACA2778A54100BB8143 /* ChallengeTwoString.swift in Sources */,
+				BA2A551E278BB6DB001861E3 /* UITriangleView.swift in Sources */,
 				BAE833B3277025C40057BF60 /* PaymentListCardViewController.swift in Sources */,
 				BABB67B32759ACEA004E52A2 /* AppDelegate.swift in Sources */,
 				BAD48AC82778A4B700BB8143 /* ChallengeOneImage.swift in Sources */,

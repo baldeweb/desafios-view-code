@@ -10,4 +10,5 @@ import Foundation
 enum ChallengeTwoString: String {
     case challTwoNavbarTitle = "FORMAS DE PAGAMENTO"
     case challTwoButtonAddNewCard = "Adicionar novo cartão"
+    case challTwoTitleHeader = "Menu Principal"
 }

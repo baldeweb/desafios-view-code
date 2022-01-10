@@ -12,7 +12,6 @@ import SnapKit
 class ItemMenuCell: UITableViewCell {
     private lazy var container: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(named: GeneralColorEnum.darkTeal.rawValue)
         return view
     }()
     
@@ -26,8 +25,18 @@ class ItemMenuCell: UITableViewCell {
         return label
     }()
     
-    public var titleOption: String = ""
-
+    private lazy var contentItem: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    open lazy var retangle: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    open lazy var triangle = UITriangleView(frame: CGRect(x: 10, y: 20, width: 25 , height: 20))
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -40,12 +49,33 @@ class ItemMenuCell: UITableViewCell {
     }
     
     private func setupView() {
-        self.titleItem.text = titleOption
+        makeContentItem()
+        self.selectionStyle = .none
         contentView.backgroundColor = .white
     }
     
+    private func makeContentItem() {
+        makeRetangle()
+        makeTriangle()
+    }
+    
+    private func makeRetangle() {
+        retangle.layer.cornerRadius = 5
+        retangle.layer.masksToBounds = true
+    }
+    
+    private func makeTriangle() {
+        triangle.backgroundColor = UIColor(white: 1, alpha: 0)
+        triangle.transform = CGAffineTransform(rotationAngle: (90 * CGFloat.pi / 180))
+        triangle.layer.cornerRadius = 10
+        triangle.layer.masksToBounds = true
+    }
+    
     private func addViewComponents() {
-        container.addSubview(titleItem)
+        retangle.addSubview(titleItem)
+        contentItem.addSubview(retangle)
+        contentItem.addSubview(triangle)
+        container.addSubview(contentItem)
         contentView.addSubview(container)
     }
     
@@ -57,11 +87,38 @@ class ItemMenuCell: UITableViewCell {
             make.trailing.equalToSuperview()
         }
         
+        contentItem.snp.makeConstraints { make in
+            make.top.equalTo(container).offset(5)
+            make.bottom.equalTo(container).inset(5)
+            make.leading.equalTo(container).offset(20)
+            make.trailing.equalTo(container).inset(20)
+            make.width.greaterThanOrEqualTo(0)
+            make.height.equalTo(50)
+        }
+        
+        retangle.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalTo(triangle.snp.leading).offset(10)
+            make.width.greaterThanOrEqualTo(0)
+            make.height.equalTo(150)
+        }
+        
+        triangle.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.width.equalTo(55)
+            make.height.equalTo(retangle)
+        }
+        
         titleItem.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.bottom.equalToSuperview().inset(10)
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().inset(10)
+            make.top.equalToSuperview().offset(15)
+            make.bottom.equalToSuperview().inset(15)
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().inset(15)
+            make.width.greaterThanOrEqualTo(0)
             make.height.equalTo(50)
         }
     }

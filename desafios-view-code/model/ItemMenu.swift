@@ -11,4 +11,6 @@ import UIKit
 struct ItemMenu {
     var titleItem: String
     var controller: UIViewController
+    var txtColor: String
+    var bgColor: String
 }
